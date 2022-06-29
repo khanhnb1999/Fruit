@@ -1,0 +1,38 @@
+.form__product {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .input__news {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 900px;
+    }
+
+    .item {
+        flex-basis: 32%;
+        margin-bottom: 32px;
+    }
+
+    .input__control {
+        padding: 16px;
+    }
+
+    .group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .item__catalog {
+        flex-basis: 49%;
+    }
+
+    .item__images {
+        flex-basis: 42%;
+    }
+}

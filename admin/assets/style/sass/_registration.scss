@@ -1,0 +1,74 @@
+.grid {
+
+
+    .form__registration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        text-align: center;
+
+        span {
+            font-weight: 600px;
+            font-size: 2rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    }
+
+    .modal__content {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: auto;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 0.5rem;
+    }
+
+    .modal__body {
+        padding: 1.5rem;
+    }
+
+    .input__control {
+        margin-bottom: 1.5rem;
+    }
+
+    .form__check {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgb(224, 218, 218);
+    }
+
+    .form__account {
+        margin: 1rem 0;
+
+        span {
+            a {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .modal__footer {
+        background-color: #f8f9fa;
+        border-top: 1px solid rgb(224, 218, 218);
+        text-align: center;
+        padding: 1rem;
+        box-sizing: border-box;
+
+        button {
+            @include button;
+            border-radius: 2rem;
+            padding: 0.5rem 2rem;
+            background-color: $primary-color;
+            color: white;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $background-primary-opacity;
+                color: white;
+            }
+        }
+    }
+}

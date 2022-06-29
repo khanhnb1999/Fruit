@@ -1,0 +1,77 @@
+.layout_flex {
+     display:flex;
+     align-items:center;
+     justify-content:center;
+}
+
+.modal__content {
+     @extend .layout_flex;
+
+     .form__group {
+          @extend .layout_flex;
+          justify-content: space-between;
+          width:1800px;
+          margin: 150px 100px;
+     }
+     
+     .header__title {
+          text-align: center;
+     
+          h5 {
+               text-transform: uppercase;
+               padding:16px;
+               font-weight: 700;
+          }
+     }
+     
+     
+     .item {
+          flex-basis: 40%;
+          border: 3px solid rgb(49, 17, 17);
+          padding:5px;
+     }
+     
+     .info__manager, .member__news {
+          @extend .layout_flex;
+          justify-content: space-around;
+          border: $black-border;
+          margin-bottom:32px;
+          padding:10px;
+     }
+     
+     .title {
+          flex-basis: 15%;
+     
+          span {
+               font-weight: 650;
+               font-family: roboto, arial, helvetica;
+          }
+     }
+     
+     
+     
+     .get__input {
+          flex-basis:70%;
+     }
+     
+     .user-case {
+          padding: 16px;
+     }
+     
+     
+     .update__admin , .create__member  {
+          text-align: center;
+          button {
+               @include button;
+               background-color:$primary-color;
+               color:$white-color;
+               padding: 14px 62px;
+               border-radius: 32px;
+               width:250px;
+               margin-bottom:16px;
+             
+          }
+     }
+     
+}
+

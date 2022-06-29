@@ -1,0 +1,215 @@
+.product__content {
+    @extend .app_website;
+
+    .title__fruits {
+        margin: 0 auto;
+        width: 15rem;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h4 {
+            color: $white-color;
+            background-color: $blue-color;
+            padding: 0.8rem 1.2rem;
+            border-radius: 2rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .list__product {
+
+        @extend .layout_flex;
+
+        &--item {
+            flex-basis: 23.66%;
+            border: $black-border;
+            border-radius: 0.8rem;
+            padding: 0.5rem;
+            background-color: $white-color;
+            text-align: center;
+            position: relative;
+            height: auto;
+            margin-bottom: 2rem;
+
+            h6 {
+                font-size: 1.3rem;
+                margin-bottom: 0.8rem;
+                font-weight: 700;
+            }
+
+            img {
+                width: 100%;
+
+            }
+
+            span {
+                font-weight: 700;
+                color: $orange-color;
+                font-size:1.1rem;
+            }
+
+            .item__icon {
+                @extend .layout_flex;
+                position: absolute;
+                padding: 0 1rem;
+                top: 20rem;
+                right: 0;
+                left: 0;
+                z-index: 1;
+                visibility: hidden;
+
+                button {
+                    @include button;
+                    font-size: 1.3rem;
+                    color: $blue-color;
+                    background-color: transparent;
+
+                    a {
+                        color: $blue-color;
+                        padding: 0.6rem;
+                        border-radius: 50%;
+                        width: 60px;
+                        transition: 0.4s;
+                        text-align: center;
+
+                        &:hover {
+                            background-color: $blue-color;
+                            color: $white-color;
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+        &--item figure {
+            position: relative;
+        }
+
+        &--item figure::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            display: block;
+            content: "";
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 100%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        &--item figure:hover::before {
+            -webkit-animation: circle 0.75s;
+            animation: circle 0.75s;
+        }
+
+        @-webkit-keyframes circle {
+            0% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            100% {
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes circle {
+            0% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            100% {
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+    }
+
+    .list__product--item:hover .item__icon {
+        visibility: visible;
+    }
+
+    .feedback {
+        position: relative;
+    }
+
+    .feedback__content {
+        @extend .layout__middle;
+
+        &--title {
+            background-color: $blue-color;
+            border-radius: 2rem;
+
+            h5 {
+                padding: 0.8rem 1rem;
+                color: $white-color;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        &--border--left {
+            position: absolute;
+            width: 24rem;
+            height: 0.2rem;
+            top: 1.4rem;
+            left: 0;
+            z-index: 1;
+            background-color: $orange-color;
+        }
+
+        &--border--right {
+            position: absolute;
+            width: 24rem;
+            height: 0.2rem;
+            top: 1.4rem;
+            right: 0;
+            z-index: 1;
+            background-color: $orange-color;
+        }
+    }
+
+    .feedback__customer {
+        @extend .layout_flex;
+        margin-top: 2rem;
+
+        &--item {
+            border-radius: 0.8rem;
+            border: $black-border;
+            text-align: center;
+            flex-basis: 32%;
+            padding: 1.5rem;
+
+            img {
+                border-radius: 1rem;
+            }
+
+
+            h5 {
+                margin: 0;
+                padding: 1rem;
+                font-weight: 600;
+                font-size: 1.4rem;
+            }
+
+        }
+    }
+
+}

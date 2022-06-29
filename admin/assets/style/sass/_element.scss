@@ -1,0 +1,45 @@
+// body
+body {
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+// element a
+a {
+    transition: .3s all ease;
+    color: $black-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+
+    }
+}
+
+// css element html h1-->h6
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5;
+    font-weight: 600;
+    color: $black-color;
+    margin: 0;
+    padding: 0;
+}
+
+
+// css element p
+p {
+    margin: 0;
+    padding: 0;
+}

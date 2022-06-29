@@ -1,0 +1,256 @@
+.sidebar {
+    position: fixed;
+    top: 4.9rem;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: $background-dark;
+}
+
+
+.sidebar__navbar {
+    padding-top: 6rem;
+    width: 300px;
+    height: 100%;
+    background-color: $background-dark-opacity;
+
+}
+
+.sidebar__nav {
+    list-style: none;
+    margin: 0;
+    padding-left: 1.3rem;
+
+    &--group {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.dropdown__btn {
+    @include button;
+    background-color: transparent !important;
+    color: $white-color-opacity;
+    display: flex;
+    align-items: center;
+
+
+
+    &:hover {
+        color: $white-color;
+    }
+
+    span {
+        width: 5.3rem;
+        text-align: left;
+        padding-left: 0.5rem;
+    }
+}
+
+
+.icon__right {
+    padding-left: 6rem;
+    font-size: 1.3rem;
+}
+
+.icon__down {
+    display: none;
+    padding-left: 6rem;
+    font-size: 1.3rem;
+}
+
+
+
+.dropdown__nav {
+    margin-top: 1rem;
+    display: none;
+}
+
+.dropdown__item {
+    color: $white-color-opacity;
+
+    a {
+        color: $white-color-opacity;
+
+        &:hover {
+            color: $white-color;
+        }
+    }
+
+}
+
+
+.header__top {
+    position: fixed;
+    background-color: $background-white;
+    top: 0;
+    width: 100%;
+    height: 4.9rem;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header {
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+    }
+}
+
+
+.nav__left {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.header__brand {
+    background-color: $background-dark;
+    width: 300px;
+    height: 4.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    img {
+        width: 7rem;
+        height: 3rem;
+    }
+
+    span {
+        position: absolute;
+        right: 1rem;
+
+        i {
+            font-size: 1.5rem;
+            color: $white-color-opacity;
+            cursor: pointer;
+
+        }
+    }
+}
+
+.header__search {
+    margin-left: 4rem;
+    border: 1px solid $border-black-opacity;
+    border-radius: 1.5rem;
+}
+
+
+.input__group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2.3rem;
+    width: 17rem;
+    padding: 1.4rem 0;
+    border-radius: 0.9rem;
+
+    input {
+        outline: none;
+        border: none;
+    }
+
+    button {
+        @include button;
+        background-color: transparent !important;
+        color: $black-color;
+        padding: 0;
+        font-size: 1.3rem;
+    }
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+    margin: 0 4rem 0 0;
+    cursor: pointer;
+    padding: 0;
+
+    li {
+        list-style: none;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.user__avatar {
+    width: 3rem;
+    margin-right: 0.5rem;
+}
+
+
+.icon__dropdown {
+    padding-left: 0.5rem;
+    font-size:1rem;
+}
+
+.user__account {
+    position: relative;
+
+    span {
+        font-weight: 650;
+    }
+
+    ul {
+        position: absolute;
+        top: 3rem;
+        right: -1rem;
+        width: 14rem;
+        height: 10rem;
+        padding: 0;
+        background-color: $background-white;
+        border-radius: 0.2rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+        li {
+            padding: 0.7rem 0 0.8rem 0;
+
+            a {
+                padding-left: 2rem;
+
+                i {
+                    padding-right: 0.3rem;
+                }
+            }
+
+            &:hover {
+                background-color: $background-primary;
+            }
+        }
+
+    }
+
+}
+
+.dropdown__menu {
+    display: none;
+}
+
+.dropdown__menu::before {
+    content: '';
+    border: 20px solid;
+    border-color: transparent transparent $white-color transparent;
+    position: absolute;
+    top: -2rem;
+    right: 0.8rem;
+}
+
+.main__content {
+    margin: 0 0 0 300px;
+}

@@ -1,0 +1,23 @@
+@mixin button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+
+@mixin button-sign {
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem;
+
+    &:hover {
+        color: white;
+    }
+}

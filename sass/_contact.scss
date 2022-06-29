@@ -1,0 +1,76 @@
+.contact__page {
+    @extend .app_website;
+
+    .contact {
+        @extend .layout_flex;
+        align-items: flex-start;
+    }
+
+    .form__group {
+        flex-basis: 48%;
+        padding: 1rem 1rem 1rem 0;
+    }
+
+    .form__control {
+        margin-bottom: 1rem;
+    }
+
+    .form__input {
+        background-color: transparent !important;
+    }
+
+    .btn__success {
+        @include button;
+        background-color: $blue-color;
+        width: 10rem;
+        height: 2.8rem;
+        border-radius: 0.3rem;
+        transition: 0.3;
+
+        &:hover {
+            background-color: $orange-color;
+            color: $white-color;
+        }
+    }
+
+    .contact__address {
+        flex-basis: 48%;
+        padding: 1rem;
+    }
+
+    .contact__address--place {
+        @extend .layout_flex;
+    }
+
+    .place__icon {
+        flex-basis: 10%;
+        background-color: $blue-color;
+        font-size: 1.3rem;
+        color: $white-color;
+        border-radius: 50%;
+        width: 2.3rem;
+        height: 2.7rem;
+        text-align: center;
+        padding-top: 0.2rem;
+    }
+
+    .place__info {
+        flex-basis: 85%;
+
+        a {
+            text-decoration: none;
+            color: $black-color;
+
+            &:hover {
+                color: $blue-color;
+            }
+        }
+    }
+
+    .map__image {
+
+        img {
+            width: 100%;
+        }
+    }
+}

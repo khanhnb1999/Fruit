@@ -1,0 +1,19 @@
+@mixin button {
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 1rem;
+}
+
+
+@mixin button-sign {
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem;
+
+    &:hover {
+        color: white;
+    }
+}

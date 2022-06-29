@@ -1,0 +1,66 @@
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 220px;
+}
+
+.form__sign--in {
+    background-color: white;
+    width: 498px;
+    border-radius: 5px;
+    padding: 17px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+
+    &--title {
+        text-align: center;
+
+
+        & h4 {
+            font-size: 2.2rem;
+        }
+    }
+
+
+    &--account {
+
+
+        &--user {
+            padding: 9px 0;
+
+            & a {
+                text-decoration: none;
+            }
+
+
+            &--button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+
+            &--password {
+
+                & a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+
+        }
+
+    }
+}
+
+.btn__danger {
+    background-color: $back-ground-danger;
+    @include button-sign;
+}
+
+.btn__info {
+    background-color: $background-primary-opacity;
+    @include button-sign;
+}

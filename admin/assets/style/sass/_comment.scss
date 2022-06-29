@@ -1,0 +1,40 @@
+.box__comment {
+     display:flex;
+     align-items:center;
+     justify-content:center;
+
+     .content {
+          width: 600px;
+          padding: 16px;
+          border: $black-border;
+          margin: 200px 100px;
+          height: auto;
+     }
+
+     .description {
+          border-bottom: $black-border;
+          padding: 0 0 17px 0;
+
+          h4 {
+               text-align: center;
+          }
+     }
+
+     .check__box {
+          padding: 20px;
+          display:flex;
+          justify-content: space-around;
+     }
+
+     .check__submit {
+          text-align: center;
+
+          button {
+               @include button;
+               background-color:$primary-color;
+               color: $white-color;
+               padding: 16px 52px;
+               border-radius: 32px;
+          }
+     }
+}

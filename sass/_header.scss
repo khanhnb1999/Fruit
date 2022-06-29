@@ -1,0 +1,472 @@
+.header {
+
+    .box__overlay {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+        display: none;
+
+        .form__registration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .title {
+            text-align: center;
+
+            span {
+                font-weight: 600px;
+                font-size: 2rem;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        }
+
+        .modal__content {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: auto;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 0.5rem;
+            position: relative;
+        }
+
+        .btn__close {
+            position: absolute;
+            @include button;
+            top: -0.8rem;
+            right: -0.8rem;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            background-color: $black-color;
+
+            i {
+                font-size: 1.2rem;
+            }
+        }
+
+        .modal__body {
+            padding: 1.3rem 1.3rem 0 1.3rem;
+        }
+
+        .input__control {
+            margin-bottom: 1rem;
+        }
+
+        .form__check {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgb(224, 218, 218);
+        }
+
+        .form__account {
+            span {
+                a {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        .form__control {
+            padding: 0.6rem;
+        }
+
+        .modal__footer {
+            text-align: center;
+            padding: 1rem 1rem 0.5rem 1rem;
+            box-sizing: border-box;
+
+            button {
+                @include button;
+                border-radius: 2rem;
+                padding: 0.5rem 2rem;
+                background-color: $primary-color;
+                color: white;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: $background-primary-opacity;
+                    color: white;
+                }
+            }
+        }
+
+        // end form registration
+        .form__login__title {
+            text-align: center;
+            margin-bottom: 1rem;
+            line-height: 0.7rem;
+
+            h4 {
+                font-size: 2.2rem;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        }
+
+        .dashboard {
+            text-align: center;
+            margin: 1rem 1rem 0 1rem;
+
+            button {
+                @include button;
+                border-radius: 2rem;
+                padding: 0.7rem 4rem;
+                background-color: $primary-color;
+                color: white;
+                transition: 0.3s;
+                font-size: 1.1rem;
+
+                &:hover {
+                    background-color: $background-primary-opacity;
+                    color: white;
+                }
+            }
+        }
+
+        // end form login
+
+
+        // end forgot password
+
+        .tab__password {
+
+            .tab__header {
+                padding: 1rem;
+                text-align: center;
+
+                h3 {
+                    font-family: 'Times New Roman', Times, serif;
+                }
+
+                p {
+                    font-family: 'Times New Roman', Times, serif;
+                }
+            }
+
+            .tab__footer {
+                text-align: center;
+                margin: 1rem;
+
+                button {
+                    background-color: $background-danger-opacity;
+                    @include button-sign;
+                    border-radius: 2rem;
+                    padding: 0.7rem 3rem;
+
+                }
+            }
+        }
+
+        .group__account {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                color: $back-ground-info;
+                cursor: pointer;
+
+                &:hover {
+                    color:$primary-color;
+                }
+            }
+
+        }
+
+    }
+
+
+    .header__top {
+        @extend .layout_flex;
+        padding: 0.7rem 0;
+        margin: 0 340px;
+
+    }
+
+    .header__top--left {
+
+        p {
+            font-size: 1rem;
+
+            i {
+                color: $blue-color;
+                font-size: $font-icon;
+            }
+        }
+    }
+
+    .navbar__register {
+        @extend .layout_flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+        li {
+
+            padding-right: 1rem;
+            button {
+                @include button;
+                // background-color: #F8F9FA;
+                color: $blue-color;
+
+
+                a {
+                    color: $blue-color;
+                    text-decoration: none;
+                }
+
+            }
+        }
+
+        li:last-child {
+            padding-right: 0;
+        }
+    }
+
+    .heading__cart {
+        position: relative;
+    }
+
+    .top__cart--content {
+        position: absolute;
+        width: 20rem;
+        height: 25rem;
+        background-color:$white-color;
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        top: 2.5rem;
+        right: 0;
+        z-index: 1;
+        padding: 0.8rem;
+        display:none;
+        transform-origin: 90%  top ;
+        animation: carGrowth ease-in 0.3s;
+    }
+
+    .top__cart--content::before {
+        content: "";
+        border-width: 1.6rem 1.8rem;
+        border-style: solid;
+        border-color: transparent transparent $white-color transparent;
+        position: absolute;
+        right: 0.9rem;
+        top: -2.7rem;
+    }
+
+    .top__cart--content::after {
+        content: "";
+        display:block;
+        position: absolute;
+        top: -1.6rem;
+        right: 0;
+        width:6rem;
+        height:1.5rem;
+    }
+
+    @keyframes carGrowth {
+        from {
+            opacity: 0;
+            transform: scale(0);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .nav__item--header {
+        margin: 0;
+        padding: 1rem 0;
+        overflow-y: auto;
+        max-height: calc(100% - 170px);
+        border-bottom: $black-border;
+    }
+
+
+    .nav__item__small {
+        list-style: none;
+        padding: 0.6rem 0 0.6rem 0;
+        @extend .layout_flex;
+        border-bottom: $black-border;
+
+        img {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        span {
+            color: $orange-color;
+            font-weight: 550;
+            font-size:0.9rem;
+        }
+    }
+
+    .delete__pr{
+        cursor: pointer;
+    }
+
+    .nav__item__small:last-child {
+        border-bottom: none;
+    }
+
+    .nav__item--body {
+        @extend .layout_flex;
+        padding:1.4rem 1rem;
+        list-style: none;
+        border-bottom: $black-border;
+
+        span {
+            color: $orange-color;
+            font-weight: 650;
+            font-size:1.2rem;
+        }
+
+    }
+
+    .nav__item--footer {
+        display:flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 1.4rem 1rem 1rem 1rem;
+
+        li {
+            padding:0.5rem 0 0.5rem 0.5rem;
+            text-align: center;
+            flex-basis: 48%;
+            width:8rem;
+            height:3rem;
+            background-color:$blue-color;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            transition: 0.3s;
+            
+            &:hover {
+                background-color:$orange-color;
+            }
+
+            a { 
+                padding: 1rem;
+                color: $white-color;
+
+            }
+
+        }
+    }
+
+    .heading__cart:hover .top__cart--content {
+        display:block;
+    }
+
+    .separate {
+        position: absolute;
+        top: 0.36rem;
+        right: 5.9rem;
+        width: 0.12rem;
+        height: 1.1rem;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .header__navbar {
+        background-color: $blue-color;
+    }
+    .navbar__side {
+        @extend .layout_flex;
+        margin: 0 340px;
+
+    }
+
+    .header__navbar--left {
+        @extend .layout_flex;
+    }
+
+    .logo__store {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        img {
+            width: 6rem;
+            height: 5rem;
+        }
+    }
+    .menu__item {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 0 2rem;
+
+        li {
+            display: inline-block;
+
+            a {
+                text-decoration: none;
+                color: $white-color;
+                font-size: 1rem;
+                padding: 0.7rem 1.5rem;
+                transition: all 0.3s ease-out;
+
+                &:hover {
+                    background-color: $orange-color;
+                    border-radius: 2rem;
+                    color: $white-color;
+                }
+            }
+        }
+    }    
+
+    .header__navbar--right {
+        background-color: $white-color;
+        height: 2.6rem;
+        padding-top: 0.2rem;
+        border-radius: 0.1rem;
+
+        input {
+            outline: none;
+            border: none;
+            padding-left: 0.5rem;
+        }
+
+        button {
+            @include button;
+            background-color: $blue-color;
+            margin-right: 0.2rem;
+            width: 3rem;
+            height: 2.2rem;
+            border-radius: 0.1rem;
+
+            i {
+                color: $white-color; 
+            }
+        }
+    }
+
+    .header__banner {
+        margin: auto 340px;
+        padding-top: 1rem;
+
+        img {
+            width: 100%;
+            border-radius: 1rem;
+        }
+    }
+    .user-tab-body {
+        display: none;
+    }
+   
+    .user-tab-body.active {
+        display: block;
+    }
+}

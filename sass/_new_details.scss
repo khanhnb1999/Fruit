@@ -1,0 +1,18 @@
+.news__details {
+    @extend .app_website;
+    .title {
+        span {
+
+            font-size: 2rem;
+            font-weight: 650;
+        }
+    }
+
+    .image {
+        img {
+            width: 80%;
+            height: auto;
+            padding: 2rem 0;
+        }
+    }
+}
